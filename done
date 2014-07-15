@@ -1,0 +1,15 @@
+<bean class="org.onebusaway.transit_data_federation.impl.realtime.gtfs_realtime.GtfsRealtimeSource">
+  <property name="tripUpdatesUrl" value="http://url/to/gtfs-realtime/trip-updates" />
+  <property name="vehiclePositionsUrl" value="http://url/to/gtfs-realtime/vehicle-positions" />
+  <property name="alertsUrl" value="http://url/to/gtfs-realtime/alerts" />
+  <!-- Optionally set the refresh interval - how often we query the URLs, in seconds (default=30) -->
+  <property name="refreshInterval" value="30"/>
+  <!-- Optionally configure the agency id we use to match incoming data -->
+  <property name="agencyId" value="SomeAgencyId" />
+  <property name="agencyIds>
+    <list>
+      <value>SomeAgencyIdA</value>
+      <value>SomeAgencyIdB</value>
+    </list>
+  </property>
+</bean>
